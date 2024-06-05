@@ -26,17 +26,21 @@ public class Assignment2Application {
 				System.out.println("Please Pick a Higher Number");
 			} else {
 				System.out.println("Please Pick a Lower Number");
-			} if ( tries == 5) {
-	            System.out.println("You Lose. The number was: " + randomNumber + ".");
-	        }
+			}
+			
+			if ( guessNumber != randomNumber && tries == 5) {
+				System.out.println("You Lose! The Number was: " + randomNumber + ".");
+			} else {
+				System.out.println("You Win!");
+			}
 			
 			guessNumber = scanner.nextInt();
 			
-			System.out.println("You Win! The number was: " + randomNumber + ".");
-				
 			scanner.close();
+			
 
 			}
 
 		}
+
 	}
