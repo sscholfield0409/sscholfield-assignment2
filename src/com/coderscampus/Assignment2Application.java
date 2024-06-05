@@ -30,7 +30,9 @@ public class Assignment2Application {
 	        }
 			guessNumber = scanner.nextInt();
 			
-			System.out.println("You Win!");
+			if ( guessNumber == randomNumber && tries < 5) {
+				System.out.println("You Win!");
+				
 			scanner.close();
 
 			}
