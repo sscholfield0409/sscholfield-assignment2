@@ -21,21 +21,22 @@ public class Assignment2Application {
 		
 		int guessNumber = scanner.nextInt();
 		while (guessNumber != randomNumber || tries < 5) {
+		
 			if ( guessNumber < randomNumber) {
 				System.out.println("Please Pick a Higher Number");
 			} else {
 				System.out.println("Please Pick a Lower Number");
-			} if (tries == 5) {
+			} if ( tries == 5) {
 	            System.out.println("You Lose. The number was: " + randomNumber + ".");
 	        }
+			
 			guessNumber = scanner.nextInt();
 			
-			if ( guessNumber == randomNumber && tries < 5) {
-				System.out.println("You Win!");
+			System.out.println("You Win! The number was: " + randomNumber + ".");
 				
 			scanner.close();
 
 			}
 
 		}
-}
+	}
