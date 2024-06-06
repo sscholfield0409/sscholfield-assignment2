@@ -23,7 +23,7 @@ public class Assignment2Application {
 				System.out.println("Please Pick a Lower Number" + ": ");
 			}
 			if (guessNumber == randomNumber) {
-                System.out.println("Congratulations! You guessed the secret number in " + tries + " tries.");
+                System.out.println("Congratulations! You guessed the secret number which is: " + randomNumber);
 			}
 			if (guessNumber > 100) {
 				System.out.println("You did not choose a number between 1 and 100: Try again");
