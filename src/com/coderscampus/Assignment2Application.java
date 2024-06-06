@@ -25,6 +25,11 @@ public class Assignment2Application {
 			if (guessNumber == randomNumber) {
                 System.out.println("Congratulations! You guessed the secret number in " + tries + " tries.");
 			}
+			if (guessNumber > 100) {
+				System.out.println("You did not choose a number between 1 and 100: Try again");
+			} else if (guessNumber < 1) {
+				System.out.println("You did not choose a number between 1 and 100: Try again");
+			}
 			
 			guessNumber = scanner.nextInt();
 			tries ++;
@@ -33,8 +38,8 @@ public class Assignment2Application {
 				System.out.println("You Lose! The Number was: " + randomNumber + ".");
 			}
 		
-			}
+		}
 		scanner.close();
 		
-		}
-	 }
+	}
+}
