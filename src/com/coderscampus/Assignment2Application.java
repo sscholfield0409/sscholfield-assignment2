@@ -34,7 +34,7 @@ public class Assignment2Application {
 			guessNumber = scanner.nextInt();
 			tries ++;
 			
-			if ( tries == 5) {
+			if ( tries == 5 && guessNumber != randomNumber) {
 				System.out.println("You Lose! The Number was: " + randomNumber + ".");
 			}
 		
