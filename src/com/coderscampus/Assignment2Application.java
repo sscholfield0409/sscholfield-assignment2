@@ -11,7 +11,7 @@ public class Assignment2Application {
 		Random random = new Random();
 		
 		int randomNumber = random.nextInt(100) + 1;
-		int tries = 0;
+		int tries = 1;
 		
 		System.out.println("Guess a number between 1 and 100");
 		int guessNumber = scanner.nextInt();
@@ -19,7 +19,7 @@ public class Assignment2Application {
 		while (tries < 5) {
 			if ( guessNumber < randomNumber) {
 				System.out.println("Please Pick a Higher Number" + ": ");
-			} else {
+			} else if ( guessNumber > randomNumber) {
 				System.out.println("Please Pick a Lower Number" + ": ");
 			}
 			if (guessNumber == randomNumber) {
