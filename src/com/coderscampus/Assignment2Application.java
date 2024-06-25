@@ -18,27 +18,25 @@ public class Assignment2Application {
 		System.out.println("Guess a number between 1 and 100");
 		int guessNumber1 = scanner.nextInt();
 		
-		
-		while (true) {
+
+while (tries < 5) {
 			
-		
-		            System.out.print("Enter a number between 1 and 10: ");
-		            String input = scanner.nextLine();
-
-		            try {
-		                int num = Integer.parseInt(input);
-		                if (num >= 1 && num <= 10) {
-		                    System.out.println("Valid input: " + num);
-		                    tries++;
-		                    break; // exit loop after valid input
-		                } else {
-		                    System.out.println("Invalid input. Please try again.");
-		                }
-		            } catch (NumberFormatException e) {
-		                System.out.println("Invalid input. Please try again.");
-		            }
-		        }
-
+			if ( guessNumber1 < randomNumber) {
+				System.out.println("Please Pick a Higher Number" + ": ");
+			} else if ( guessNumber1 > randomNumber) {
+				System.out.println("Please Pick a Lower Number" + ": ");
+			}
+			
+			if (guessNumber1 == randomNumber && tries <= 5) {
+                System.out.println("Congratulations! You guessed the secret number which is: " + randomNumber);
+			}
+			
+			if (guessNumber1 > 100 || guessNumber1 < 1) {
+				System.out.println("Invalid Entry: You did not choose a number between 1 and 100: Try again");
+			} 
+			
+			guessNumber1 = scanner.nextInt();
+			tries ++;
 		    
 	
 			if ( tries == 5 && guessNumber1 != randomNumber) {
@@ -48,7 +46,11 @@ public class Assignment2Application {
 	
 		}
 		
+		scanner.close();
 	}
+}
+
+	
 
 	
 	
