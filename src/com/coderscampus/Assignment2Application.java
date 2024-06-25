@@ -4,7 +4,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Assignment2Application {
-
+	
+	
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
@@ -15,37 +16,40 @@ public class Assignment2Application {
 		
 		
 		System.out.println("Guess a number between 1 and 100");
-		int guessNumber = scanner.nextInt();
+		int guessNumber1 = scanner.nextInt();
 		
-		while (tries < 5) {
+		
+		while (true) {
 			
-			if ( guessNumber < randomNumber) {
-				System.out.println("Please Pick a Higher Number" + ": ");
-			} else if ( guessNumber > randomNumber) {
-				System.out.println("Please Pick a Lower Number" + ": ");
-			}
-			if (guessNumber == randomNumber && tries <= 5) {
-                System.out.println("Congratulations! You guessed the secret number which is: " + randomNumber);
-			}
-			
-			guessNumber = scanner.nextInt();
-			tries ++;
+		
+		            System.out.print("Enter a number between 1 and 10: ");
+		            String input = scanner.nextLine();
+
+		            try {
+		                int num = Integer.parseInt(input);
+		                if (num >= 1 && num <= 10) {
+		                    System.out.println("Valid input: " + num);
+		                    tries++;
+		                    break; // exit loop after valid input
+		                } else {
+		                    System.out.println("Invalid input. Please try again.");
+		                }
+		            } catch (NumberFormatException e) {
+		                System.out.println("Invalid input. Please try again.");
+		            }
+		        }
+
 		    
-			
-			if (guessNumber > 100) {
-				System.out.println("You did not choose a number between 1 and 100: Try again");
-			} else if (guessNumber < 1) {
-				System.out.println("You did not choose a number between 1 and 100: Try again");
-			} 
-			
-			
-			if ( tries == 5 && guessNumber != randomNumber) {
+	
+			if ( tries == 5 && guessNumber1 != randomNumber) {
 				System.out.println("You Lose! The Number was: " + randomNumber + ".");
-			} 
-			
+			}
 		
+	
 		}
-		scanner.close();
 		
 	}
-}
+
+	
+	
+
