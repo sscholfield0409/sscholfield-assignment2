@@ -22,14 +22,13 @@ while (tries < 5) {
 			
 			if ( guessNumber1 < randomNumber) {
 				System.out.println("Please Pick a Higher Number" + ": ");
-				tries ++;
-				guessNumber1 = scanner.nextInt();
 				
 			} else if ( guessNumber1 > randomNumber) {
 				System.out.println("Please Pick a Lower Number" + ": ");
-				tries ++;
-				guessNumber1 = scanner.nextInt();
 			} 
+			tries ++;
+			guessNumber1 = scanner.nextInt();
+			
 			
 			if (guessNumber1 == randomNumber && tries <= 5) {
                 System.out.println("Congratulations! You guessed the secret number which is: " + randomNumber);
