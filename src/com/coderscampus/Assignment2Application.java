@@ -13,19 +13,23 @@ public class Assignment2Application {
 		
 		int randomNumber = random.nextInt(100) + 1;
 		int tries = 1;
-		
+	
 		
 		System.out.println("Guess a number between 1 and 100");
 		int guessNumber1 = scanner.nextInt();
-		
 
 while (tries < 5) {
 			
 			if ( guessNumber1 < randomNumber) {
 				System.out.println("Please Pick a Higher Number" + ": ");
+				tries ++;
+				guessNumber1 = scanner.nextInt();
+				
 			} else if ( guessNumber1 > randomNumber) {
 				System.out.println("Please Pick a Lower Number" + ": ");
-			}
+				tries ++;
+				guessNumber1 = scanner.nextInt();
+			} 
 			
 			if (guessNumber1 == randomNumber && tries <= 5) {
                 System.out.println("Congratulations! You guessed the secret number which is: " + randomNumber);
@@ -33,11 +37,7 @@ while (tries < 5) {
 			
 			if (guessNumber1 > 100 || guessNumber1 < 1) {
 				System.out.println("Invalid Entry: You did not choose a number between 1 and 100: Try again");
-			} 
-			
-			guessNumber1 = scanner.nextInt();
-			tries ++;
-		    
+			}  
 	
 			if ( tries == 5 && guessNumber1 != randomNumber) {
 				System.out.println("You Lose! The Number was: " + randomNumber + ".");
@@ -47,11 +47,5 @@ while (tries < 5) {
 		}
 		
 		scanner.close();
-	}
 }
-
-	
-
-	
-	
-
+}
