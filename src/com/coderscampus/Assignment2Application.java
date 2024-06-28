@@ -29,13 +29,13 @@ while (tries < 5) {
 			
 			tries++;
 			guessNumber1 = scanner.nextInt();
-			
-            	
+
+		 	
 			if (guessNumber1 == randomNumber && tries <= 5) {
 				System.out.println("Congratulations! You guessed the secret number which is: " + randomNumber);
 				break;
 			} 
-
+			
 			if (guessNumber1 > 100 || guessNumber1 < 1) {
 				System.out.println("Invalid Entry: You did not choose a number between 1 and 100: Try again");
 				continue;
@@ -44,6 +44,7 @@ while (tries < 5) {
 			if ( tries == 5 && guessNumber1 != randomNumber) {
 				System.out.println("You Lose! The Number was: " + randomNumber + ".");
 			}
+			
 			scanner.close();
 	
 }
